@@ -1,0 +1,45 @@
+from setuptools import find_packages, setup
+
+setup(
+    name="markitdown-pro",
+    version="0.1.0",
+    author="Developer",
+    description="A package that converts any file format to Markdown.",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    packages=find_packages(
+        exclude=["tests", "tests/*", ".venv", ".venv/*", ".vscode", ".vscode/*"]
+    ),
+    python_requires=">=3.12.2",
+    install_requires=[
+        "pillow==11.1.0",
+        "requests",
+        "python-dotenv",
+        "azure-core",
+        "azure-ai-documentintelligence==1.0.0",
+        "azure-cognitiveservices-speech==1.42.0",
+        "azure-common==1.1.28",
+        "whisper",
+        "markitdown",
+        "langchain>=0.3.23",
+        "langchain-core>=0.3.51",
+        "langchain-openai>=0.3.12",
+        "langchain-text-splitters>=0.3.8",
+        "langdetect>=1.0.9",
+        "langsmith>=0.3.26",
+        "openai>=1.71.0",
+        "PyMuPDF",
+        "tabulate==0.9.0",
+        "chardet==5.2.0",
+        "unstructured[all-docs]",
+        "youtube-transcript-api",
+        "pyexiftool",
+        "pydub",
+        "nbformat",
+    ],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
